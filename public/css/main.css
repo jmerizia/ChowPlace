@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'profont';
+  src: url('profont.ttf');
+}
+
+body {
+  font-family: 'profont';
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+#puzzleBlock {
+  background-color: #eee;
+  padding: 10px;
+}
+
+#puzzleBlock span {
+  color: red;
+}
+
+.center {
+  text-align: center;
+}
+
+#bank {
+  width: 200px;
+  padding: 5px;
+  background-color: lightblue;
+  display: block;
+}
+
+#bank p {
+  padding: 7px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+#bank_amount {
+  font-size: 25px;
+  text-align: center;
+}
+
+#bank input {
+  width: 50px;
+  display: inline;
+  margin-bottom: 10px;
+}
+
+#bank button {
+  display: block;
+  margin: 0 auto;
+}
+
+#bank span {
+  display: inline;
+  margin-left: 65px;
+}
+
+#error_message {
+  color: red;
+  padding: 5px;
+}

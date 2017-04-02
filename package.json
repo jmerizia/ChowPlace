@@ -1,0 +1,17 @@
+{
+  "name": "nectar_local",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jacob Merizian",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "path": "^0.12.7",
+    "livereload": "^0.6.2"
+  }
+}
