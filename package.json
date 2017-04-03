@@ -1,9 +1,13 @@
 {
-  "name": "nectar_local",
+  "name": "ChowPlace",
   "version": "1.0.0",
-  "description": "",
+  "description": "Let's users find local places to eat!",
   "scripts": {
     "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmerizia/ChowPlace.git"
   },
   "author": "Jacob Merizian",
   "license": "ISC",
@@ -13,6 +17,6 @@
     "express": "^4.14.1",
     "livereload": "^0.6.2",
     "path": "^0.12.7",
-    "yelp": "^1.0.2"
+    "yelp-api-v3": "^1.5.0"
   }
 }

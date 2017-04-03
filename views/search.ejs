@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chow Place</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Search | Chow Place</title>
+    <% include favicon.ejs %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <link rel="stylesheet" type="text/css" href="css/lib/easy-autocomplete.min.css">
   </head>
 
   <body>
 
-    <h1><a href="/">Chow<span>Place</span></a></h1>
+    <% include octocat.ejs %>
+
+    <% include logo.ejs %>
 
     <div class="container">
 
       <% include topbar.ejs %>
 
-      search page
+      <h2>Search for some chow:</h2>
 
+      <input class="searchbar" placeholder="search anything..."/>
+
+      <br /><br />
     </div>
 
+    <div id="raw_data"></div>
+
+    <% include footer.ejs %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/lib/jquery.easy-autocomplete.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/searchJS.js"></script>
 
   </body>
 

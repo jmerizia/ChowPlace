@@ -27,6 +27,14 @@ h1 span {
   color: #FF5757;
 }
 
+h2 {
+  font-size: 25px;
+  font-family: 'gibold';
+  text-align: center;
+  padding-top: 20px;
+  color: #FF5757;
+}
+
 .topbar {
   position: absolute;
   display: block;
@@ -51,9 +59,43 @@ h1 span {
   position: relative;
   max-width: 650px;
   display: block;
-  background-color: #60E14F;
+  background-color: #7EE570;
   margin: 0 auto;
-  height: 40px;
   border-radius: 10px;
   margin-top: 50px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.footer p {
+  font-family: 'giregular';
+  color: grey;
+  position: relative;
+  text-align: center;
+}
+
+.footer a {
+  font-family: 'giregular';
+  text-decoration: underline;
+  color: black;
+}
+
+.footer a:hover {
+  opacity: 0.75;
+}
+
+#octocat {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 40px;
+  padding: 5px;
+}
+
+#octocat:hover {
+  opacity: .75;
 }
