@@ -9,15 +9,33 @@ var route = express.Router();
 route.get('/search', function(req, res) {
     // This is the code that renders the template
 
-    if (req.query.auto) {
-      yelp.search({
-        text: req.query.auto,
-        latitude: 40.71,
-        longitude: 74.00
-      }).then(function (data) {
-        res.send(data);
+    var auto = req.query.auto;
+    var lon = req.query.lon;
+    var lat = req.query.lat;
+
+    if (auto) {
+      yelp.autocomplete({
+        text: auto,
+        latitude: lat,
+        longitude: lon
+      }).then(function (dataJSON) {
+        var data = JSON.parse(dataJSON);
+        response = [];
+        data.terms.forEach(function (term) {
+          response.push(term.text);
+        });
+        data.businesses.forEach(function (business) {
+          response.push(business.name);
+        });
+        data.categories.forEach(function (category) {
+          if (category.title != '') {
+            response.push(category.title);
+          } else {
+            response.push(category.alias);
+          }
+        });
+        res.send(JSON.stringify(response));
       }).catch(function (err) {
-        console.log(err);
         res.send(err);
       });
 
