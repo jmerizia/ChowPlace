@@ -1,69 +1,59 @@
 @font-face {
-  font-family: 'profont';
-  src: url('profont.ttf');
+  font-family: 'gibold';
+  src: url('fonts/GI-Bold.otf');
+}
+
+@font-face {
+  font-family: 'giregular';
+  src: url('fonts/GI-Regular.otf');
 }
 
 body {
-  font-family: 'profont';
-  max-width: 600px;
+  font-family: 'gibold';
 }
 
 h1 {
   font-size: 40px;
+  line-height: 20px;
 }
 
-h3 {
-  font-size: 20px;
+h1 a {
+
+  color: #1ADA00;
+  text-decoration: none;
 }
 
-#puzzleBlock {
-  background-color: #eee;
-  padding: 10px;
+h1 span {
+  color: #FF5757;
 }
 
-#puzzleBlock span {
-  color: red;
-}
-
-.center {
-  text-align: center;
-}
-
-#bank {
-  width: 200px;
-  padding: 5px;
-  background-color: lightblue;
+.topbar {
+  position: absolute;
   display: block;
+  /*border: thin solid red;*/
+  margin-left: 10%;
+  top: -20px;
 }
 
-#bank p {
-  padding: 7px;
-  margin-bottom: 3px;
-  margin-top: 3px;
+.topbar a {
+  text-decoration: none;
+  position: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #FF5757;
 }
 
-#bank_amount {
-  font-size: 25px;
-  text-align: center;
+.topbar a:hover {
+  opacity: 0.75;
 }
 
-#bank input {
-  width: 50px;
-  display: inline;
-  margin-bottom: 10px;
-}
-
-#bank button {
+.container {
+  position: relative;
+  max-width: 650px;
   display: block;
+  background-color: #60E14F;
   margin: 0 auto;
-}
-
-#bank span {
-  display: inline;
-  margin-left: 65px;
-}
-
-#error_message {
-  color: red;
-  padding: 5px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 50px;
 }

@@ -6,6 +6,10 @@ var https = require('https');
 
 // This imports the Router that uses the template engine
 var index = require('./routers/index');
+var map = require('./routers/map');
+var chat = require('./routers/chat');
+var search = require('./routers/search');
+var trends = require('./routers/trends');
 
 var app = express();
 
@@ -36,6 +40,10 @@ app.use(bodyParser.json());
 
 // This bind the Router to the / route
 app.use('/', index);
+app.use('/', map);
+app.use('/', search);
+app.use('/', trends);
+app.use('/', chat);
 
 // Handle 404
 app.use(function (req, res) {
