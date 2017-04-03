@@ -15,6 +15,17 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
+var Yelp = require('yelp');
+
+
+
+var yelp = new Yelp({
+  consumer_key: 'HsBhjbvMxB3AJnLDmW9eqQ',
+  consumer_secret: 'rb8WWhT7zU52m8kF36BsuYYd5EpM0bKG1vBoWBVP4SDYTpMBBb8P7i3pdJEOtlUu',
+  token: 'bW0hpXM7WeFtskUUvISZ3Ofdz944ETsyH93R46frG0oe4o2wIBiecRybKGATLbmiRL7aGczoK-eiNQC7jPW_qhTY4-Pxckb_sNOWm9lVBDMOZ8APSVqn3RW4zJvhWHYx',
+  token_secret: 'token-secret'
+});
+
 if (process.env.PORT) {
   app.use(function (req, res, next) {
     if ( (!req.secure) && (req.get('X-Forwarded-Proto') !== 'https') ) {
