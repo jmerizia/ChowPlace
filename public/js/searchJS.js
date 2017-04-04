@@ -1,8 +1,8 @@
 $('.searchbar').easyAutocomplete({
   url: function (phrase) {
     return '/search?auto=' + phrase
-    + (pos ? ('&lat=' + pos.coords.latitude) : '')
-    + (pos ? ('&lon=' + pos.coords.longitude) : '');
+    + '&lat=' + pos.coords.latitude
+    + '&lon=' + pos.coords.longitude;
   },
   list: {
     onChooseEvent: function () {

@@ -19,15 +19,18 @@ route.get('/search', function(req, res) {
         latitude: lat,
         longitude: lon
       }).then(function (dataJSON) {
-        var data = dataJSON;
+        var data = JSON.parse(dataJSON);
         response = [];
+
         data.terms.forEach(function (term) {
           response.push(term.text);
         });
         data.businesses.forEach(function (business) {
           response.push(business.name);
         });
+
         data.categories.forEach(function (category) {
+          console.log('hi');
           if (category.title != '') {
             response.push(category.title);
           } else {
