@@ -30,7 +30,6 @@ route.get('/search', function(req, res) {
         });
 
         data.categories.forEach(function (category) {
-          console.log('hi');
           if (category.title != '') {
             response.push(category.title);
           } else {

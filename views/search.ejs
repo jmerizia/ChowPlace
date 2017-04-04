@@ -46,9 +46,7 @@
 
             <img class="business_img" src="{{image_url}}" />
 
-            <div class="business_rating" style="width: {{multiply rating 15}}%;">
-
-
+            <div class="business_info">
               <div class="business_name">
                 <p>{{name}} | {{price}}</p>
               </div>
@@ -58,6 +56,11 @@
               <div class="business_phone">
                 <p>{{display_phone}}</p>
               </div>
+            </div>
+
+            <div class="business_rating" style="width: calc({{multiply rating 20}}% - 90px);">
+
+
 
             </div>
 
