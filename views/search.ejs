@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Search | Chow Place</title>
-    <% include favicon.ejs %>
+    <% include partial/favicon.ejs %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/lib/easy-autocomplete.min.css">
     <link rel="stylesheet" type="text/css" href="css/search.css">
@@ -11,13 +11,13 @@
 
   <body>
 
-    <% include octocat.ejs %>
+    <% include partial/octocat.ejs %>
 
-    <% include logo.ejs %>
+    <% include partial/logo.ejs %>
 
     <div class="container">
 
-      <% include topbar.ejs %>
+      <% include partial/topbar.ejs %>
 
       <h2>Search for some chow:</h2>
 
@@ -25,17 +25,65 @@
         <input class="searchbar" placeholder="search anything..."/>
       </div>
 
-      <br /><br />
+      <br />
+      <div class="error_box">Please allow location settings to continue!</div>
+    </div>
+
+    <% include partial/footer.ejs %>
+
+    <div class="container2">
+
+      <div id="target"></div>
+
+      <script id="template" type="text/x-handlebars-template">
+
+        <h3>
+          Places Near You:
+        </h3>
+
+        {{#list businesses}}
+          <div class="search_result">
+
+            <img class="business_img" src="{{image_url}}" />
+
+            <div class="business_rating" style="width: {{multiply rating 15}}%;">
+
+
+              <div class="business_name">
+                {{name}}
+              </div>
+              <div class="business_address">
+                {{display_address}}
+              </div>
+              <div class="business_phone">
+                {{display_phone}}
+              </div>
+              <div class="business_price">
+                {{price}}
+              </div>
+
+            </div>
+
+            <div class="rating_number">
+              {{rating}}/5
+            </div>
+
+          </div>
+        {{/list}}
+
+
+      </script>
+
+
+
     </div>
 
     <div id="raw_data"></div>
 
-    <% include footer.ejs %>
+    <% include partial/libraries.ejs %>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/lib/jquery.easy-autocomplete.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/searchJS.js"></script>
+
 
   </body>
 

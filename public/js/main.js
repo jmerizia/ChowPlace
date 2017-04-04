@@ -1,4 +1,9 @@
-var pos;
+var pos = {
+  coords: {
+    latitude: 37.225532,
+    longitude: -80.4169828
+  }
+}
 
 function getLocation() {
   if (navigator.geolocation) {

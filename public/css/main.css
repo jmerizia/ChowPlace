@@ -35,6 +35,13 @@ h2 {
   color: #FF5757;
 }
 
+h3 {
+  font-size: 20px;
+  font-family: 'gibold';
+  line-height: 10px;
+  color: #FF5757;
+}
+
 .topbar {
   position: absolute;
   display: block;
@@ -67,7 +74,7 @@ h2 {
 
 .footer {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   width: 100%;
 }
 
@@ -118,4 +125,12 @@ h2 {
 #octocat_link {
   text-decoration: underline;
   color: black;
+}
+
+.error_box {
+  display: none;
+  text-align: center;
+  color: red;
+  padding: 20px;
+  font-family: 'gibold';
 }

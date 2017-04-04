@@ -19,7 +19,7 @@ route.get('/search', function(req, res) {
         latitude: lat,
         longitude: lon
       }).then(function (dataJSON) {
-        var data = JSON.parse(dataJSON);
+        var data = dataJSON;
         response = [];
         data.terms.forEach(function (term) {
           response.push(term.text);
