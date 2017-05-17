@@ -11,7 +11,8 @@ var chow = require('./routers/chow');
 
 var app = express();
 
-var port = process.env.PORT || 3000;
+//var port = process.env.PORT || 3000;
+var port = 3005;
 
 var Yelp = require('yelp-api-v3');
 
